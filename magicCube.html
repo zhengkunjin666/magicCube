@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>magicCube</title>
+    <style>
+        .magicCube{
+            width: 459px;
+            height: 459px;
+            margin: 25px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 4000px;
+            transform-style: preserve-3d;
+            transform: rotateX(-20deg) rotateY(-135deg) rotateZ(120deg)
+        }
+        .upper,.middle,.lower{
+            transform-style: preserve-3d;
+        }
+        @-webkit-keyframes upper{
+            0%{
+                -webkit-transform: translateX(153px) translateZ(51px) rotate(45deg);
+            }
+            100%{
+                -webkit-transform: translateX(153px) translateZ(51px) rotate(360deg);
+            }
+        }
+        .upper{
+            transform: translateX(153px) translateZ(51px);
+            animation: upper 4s ease-in-out infinite alternate;
+        }
+        @-webkit-keyframes middle{
+            16%{
+                -webkit-transform: rotateZ(-45deg);
+            }
+            100%{
+                -webkit-transform: rotateZ(-360deg);
+            }
+        }
+        .middle{
+            animation: middle 4s ease-in-out infinite alternate;
+        }
+        @-webkit-keyframes lower{
+            0%{
+                -webkit-transform: translateX(-153px) translateZ(-51px) rotate(45deg);
+            }
+            100%{
+                -webkit-transform: translateX(-153px) translateZ(-51px) rotate(360deg);
+            }
+        }
+        .lower{
+            transform: translateX(-153px) translateZ(-51px);
+            animation: lower 4s ease-in-out infinite alternate;
+        }
+        @-webkit-keyframes cube{
+            0%{
+                -webkit-transform: rotate(0deg);
+            }
+            87%{
+                -webkit-transform: rotate(0deg);
+            }
+            90%{
+                -webkit-transform: rotate(90deg)
+            }
+            100%{
+                -webkit-transform: rotate(90deg);
+            }
+        }
+        .cube{
+            width: 50px;
+            height: 50px;
+            margin: 0.5px;
+            position: relative;
+            transform-style: preserve-3d;
+            float: left;
+            animation: cube 4s ease-in infinite alternate;
+        }
+        .cube-front{
+            width: 100%;
+            height: 100%;
+            background: rgba(159,190,212,0.8);
+            position: absolute;
+            transform: translateZ(25px);
+        }
+        .cube-back{
+            width: 100%;
+            height: 100%;
+            background: rgba(250,196,87,0.8);
+            position: absolute;
+            transform: translateZ(-25px) rotateY(180deg)
+        }
+        .cube-left{
+            width: 100%;
+            height: 100%;
+            background: rgba(255,79,73,0.8);
+            position: absolute;
+            transform: rotateY(-90deg) translateZ(25px);
+            
+        }
+        .cube-right{
+            width: 100%;
+            height: 100%;
+            background: rgba(75,53,56,0.8);
+            position: absolute;
+            transform: rotateY(90deg) translateZ(25px);
+        }
+        .cube-top{
+            width: 100%;
+            height: 100%;
+            background: rgba(255,247,211,0.8);
+            position: absolute;
+            transform: rotateX(90deg) translateZ(25px);
+        }
+        .cube-bottom{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,118,143,0.8);
+            position: absolute;
+            transform: rotateX(-90deg) translateZ(25px);
+        }
+    </style>
+</head>
+<body>
+    <div class="magicCube">
+        <div class="upper">
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+        </div> 
+        <div class="middle">
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+        </div>            
+        <div class="lower">
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+            <div class="cube">
+                <div class="cube-front"></div>
+                <div class="cube-back"></div>
+                <div class="cube-left"></div>
+                <div class="cube-right"></div>
+                <div class="cube-top"></div>
+                <div class="cube-bottom"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
